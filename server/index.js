@@ -27,9 +27,9 @@ app.use("/api/orders", orderRoutes);
 app.use("/api/payment", paymentRoutes);
 
 mongoose
-  .connect(process.env.Mongo_URL)
+  .connect(process.env.MONGO_URL)
   .then(() => console.log("Database Connected"))
-  .catch((err) => console.error(err));
+  .catch((err) => console.error("MongoDB connection error:", err));
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
