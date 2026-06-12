@@ -26,7 +26,6 @@ app.use("/api/cart", cartRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/payment", paymentRoutes);
 
-
 mongoose
   .connect(process.env.Mongo_URL)
   .then(() => console.log("Database Connected"))
@@ -34,5 +33,5 @@ mongoose
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Server is listening on port${PORT}`);
+  console.log(`Server is listening on port ${PORT}`);
 });
